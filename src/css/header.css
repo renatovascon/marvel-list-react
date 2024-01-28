@@ -1,0 +1,6 @@
+header .logo {
+    z-index: 1;
+    position: relative;
+    width: 25%;
+    display: flex;
+  }
