@@ -4,6 +4,15 @@
   margin: 2% auto;
   margin-top: 2%;
 }
+.list-heroes p {
+  color: var(--red);
+}
+
+.list-heroes picture {
+  align-items: center;
+  display: flex;
+  margin-right: 1%;
+}
 
 .heroes-grid {
   display: grid;
