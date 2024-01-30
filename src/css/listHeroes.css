@@ -1,7 +1,8 @@
 @import "../assets/styles/colors.scss";
 .list-heroes {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 2% auto;
+  margin-top: 2%;
 }
 
 .heroes-grid {
@@ -16,7 +17,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: var(--primary);
+  color: var(--dark);
 }
 
 .hero-image {
@@ -32,30 +33,30 @@
   display: flex;
 }
 
-/* searchForm.css */
 .form-container {
   display: flex;
   align-items: center;
-  width: 200px; /* Ajuste conforme necessário */
-  background-color: #fdecec; /* Background vermelho */
-  border-radius: 20px; /* Bordas arredondadas */
-  padding: 8px; /* Espaçamento interno */
+  width: 200px;
+  background-color: var(--redLight);
+  border-radius: 20px;
+  padding: 8px;
 }
 
 .form-search {
-  flex: 1; /* Ocupa o espaço disponível */
+  flex: 1;
   border: none;
   outline: none;
-  background: none; /* Remove o fundo padrão do input */
-  font-size: 16px; /* Tamanho da fonte */
+  background: none;
+  font-size: 16px;
 }
 
 .search-icon {
-  width: 20px; /* Ajuste conforme necessário */
-  height: 20px; /* Ajuste conforme necessário */
-  margin-left: 8px; /* Espaçamento entre o input e a imagem de lupa */
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
   padding-right: 5%;
   cursor: pointer;
+  color: var(--red);
 }
 
 .search-forms {

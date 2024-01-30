@@ -45,12 +45,20 @@ const HeroList = () => {
     setCurrentPage(page)
   }
 
+  const onShowSelectedHeroes = (heroe) => {
+    const heroeSelected = heroesList.filter((hero) => heroe.includes(hero.id))
+    setHeroes(heroeSelected)
+  }
+
   return (
     <>
       <div className="search-forms">
         <SearchForm onSearch={handleSearch} />
       </div>
-      <CardSearch heroes={heroesList} />
+      <CardSearch
+        heroes={heroesList}
+        onShowSelectedHeroes={onShowSelectedHeroes}
+      />
       <Pagination
         totalPages={totalPages}
         onPageChange={handlePageChange}

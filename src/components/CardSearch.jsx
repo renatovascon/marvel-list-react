@@ -2,8 +2,9 @@
 import React, { useEffect, useState } from "react"
 import heart from "../assets/icones/heart/Path Copy 2.png"
 import heartFilled from "../assets/icones/heart/Path Copy 7@1,5x.png"
+import heroe from "../assets/icones/heroi/noun_Superhero_2227044.png"
 
-export function CardSearch({ heroes }) {
+export function CardSearch({ heroes, onShowSelectedHeroes }) {
   const [loaded, setLoaded] = useState(false)
   const [selectedCards, setSelectedCards] = useState([])
 
@@ -25,11 +26,28 @@ export function CardSearch({ heroes }) {
       setSelectedCards((prevSelectedCards) => [...prevSelectedCards, heroId])
     }
   }
+
   return (
     <>
       {loaded && (
         <div className="list-heroes">
-          <h5>Encontrado um total de {heroes.length} heróis</h5>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-around",
+            }}
+          >
+            <h5 style={{ width: "100%" }}>
+              Encontrado um total de {heroes.length} heróis
+            </h5>
+            <div style={{ display: "flex", width: "100%" }}>
+              <img
+                src={heroe}
+                onClick={() => onShowSelectedHeroes(selectedCards)}
+              />
+              <p>Somente Favoritos</p>
+            </div>
+          </div>
           <ul className="heroes-grid">
             {heroes.map((hero) => (
               <li
@@ -40,11 +58,7 @@ export function CardSearch({ heroes }) {
               >
                 <div className="search-list">
                   <img
-                    src={
-                      hero.thumbnail.path +
-                      "/standard_xlarge." +
-                      hero.thumbnail.extension
-                    }
+                    src={`${hero.thumbnail.path}/standard_xlarge.${hero.thumbnail.extension}`}
                     alt={hero.name}
                     className="hero-image"
                   />
@@ -55,7 +69,7 @@ export function CardSearch({ heroes }) {
                         selectedCards.includes(hero.id) ? heartFilled : heart
                       }
                       alt={hero.name}
-                      onClick={() => handleCardSelect(hero.id)} // Adiciona evento de clique
+                      onClick={() => handleCardSelect(hero.id)}
                     />
                   </div>
                 </div>
