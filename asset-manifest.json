@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/marvel-list-react/static/css/main.72311e31.css",
+    "main.js": "/marvel-list-react/static/js/main.40d524b1.js",
+    "static/js/787.d1010c5f.chunk.js": "/marvel-list-react/static/js/787.d1010c5f.chunk.js",
+    "static/media/Group.png": "/marvel-list-react/static/media/Group.77d3c46d95da06aa6625.png",
+    "index.html": "/marvel-list-react/index.html",
+    "main.72311e31.css.map": "/marvel-list-react/static/css/main.72311e31.css.map",
+    "main.40d524b1.js.map": "/marvel-list-react/static/js/main.40d524b1.js.map",
+    "787.d1010c5f.chunk.js.map": "/marvel-list-react/static/js/787.d1010c5f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.72311e31.css",
+    "static/js/main.40d524b1.js"
+  ]
+}
